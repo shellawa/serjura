@@ -8,7 +8,7 @@
 <main class="mx-auto max-w-6xl px-6 py-16">
   <div class="space-y-4">
     {#each data.blogs as blog}
-      <a href={`/blogs/${blog.slug}`} class="block">
+      <a href={`/blogs/${blog.id}/${blog.slug}`} class="block">
         <Card class="border-border/50 bg-transparent transition-colors hover:border-border hover:bg-primary-foreground/10">
           <CardHeader>
             <div class="flex items-start justify-between gap-4">

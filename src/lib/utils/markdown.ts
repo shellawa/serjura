@@ -39,6 +39,6 @@ export async function parseMarkdown(rawContent: string) {
 
   return {
     html: file.toString(),
-    meta: file.data.matter as Record<string, any>
+    matter: file.data.matter as Record<string, any>
   }
 }

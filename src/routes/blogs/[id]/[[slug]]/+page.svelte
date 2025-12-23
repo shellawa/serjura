@@ -39,7 +39,7 @@
   }
 
   onMount(() => {
-    headingsEls = data.headings.map((h) => document.getElementById(h.id)).filter(Boolean) as HTMLElement[]
+    headingsEls = data.meta.headings.map((h) => document.getElementById(h.id)).filter(Boolean) as HTMLElement[]
     if (location.hash) scrollTo(location.hash)
 
     window.addEventListener("scroll", updateActive, { passive: true })
@@ -61,9 +61,9 @@
     <article class="prose max-w-3xl flex-1 prose-invert">
       <!-- meta -->
       <div class="mb-12 space-y-4">
-        <h1 class="text-5xl font-bold tracking-tight text-balance">{data.title}</h1>
+        <h1 class="text-5xl font-bold tracking-tight text-balance">{data.meta.title}</h1>
         <div class="flex items-center gap-3 text-sm text-muted-foreground">
-          <time dateTime={data.created}>{data.created}</time>
+          <time dateTime={data.meta.created}>{data.meta.created}</time>
         </div>
       </div>
       <!-- content -->
@@ -76,7 +76,7 @@
       <Card class="p-6">
         <h3 class="text-sm font-semibold text-foreground">Table of Contents</h3>
         <nav class="relative space-y-1 pl-2">
-          {#each data.headings as heading (heading.id)}
+          {#each data.meta.headings as heading (heading.id)}
             <button
               onclick={() => scrollTo("#" + heading.id)}
               class="group relative block w-full cursor-pointer text-left text-sm transition-colors

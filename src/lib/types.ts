@@ -1,6 +1,6 @@
-import type { Root as MdastRoot } from 'mdast';
-import type { Root as HastRoot } from 'hast';
-import type { Transformer } from 'unified';
+import type { Root as MdastRoot } from "mdast"
+import type { Root as HastRoot } from "hast"
+import type { Transformer } from "unified"
 
 export type Heading = {
   id: string
@@ -8,7 +8,7 @@ export type Heading = {
   title: string
 }
 
-export type Blog = {
+export type BlogMeta = {
   id: number
   slug: string
   title: string
@@ -20,7 +20,6 @@ export type Blog = {
   published?: boolean
 }
 
-
-export type { MdastRoot, HastRoot };
-export type HastTransformer = Transformer<HastRoot, HastRoot>;
-export type MdastTransformer = Transformer<MdastRoot, MdastRoot>;
+export type { MdastRoot, HastRoot }
+export type HastTransformer = Transformer<HastRoot, HastRoot>
+export type MdastTransformer = Transformer<MdastRoot, MdastRoot>
