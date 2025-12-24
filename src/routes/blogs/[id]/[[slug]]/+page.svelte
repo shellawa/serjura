@@ -78,8 +78,8 @@
         category="Giscus"
         categoryId="DIC_kwDOQsOnHM4C0MrE"
         mapping="specific"
-        term={data.meta.id.toString()}
-        id={data.meta.id.toString()}
+        term="cs-{data.meta.id.toString()}"
+        id="cs-{data.meta.id.toString()}"
         strict="0"
         reactionsEnabled="1"
         emitMetadata="0"
