@@ -25,8 +25,8 @@ export async function parseMarkdown(rawContent: string) {
     .use(rehypeKatex)
     .use(rehypeShiki, {
       themes: {
-        light: "catppuccin-latte",
-        dark: "catppuccin-mocha"
+        light: "github-light-default",
+        dark: "github-dark-default"
       },
       inline: "tailing-curly-colon"
     })

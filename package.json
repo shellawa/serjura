@@ -38,6 +38,7 @@
     "vite-plugin-devtools-json": "^1.0.0"
   },
   "dependencies": {
+    "@giscus/svelte": "^3.1.0",
     "@shikijs/rehype": "^3.20.0",
     "@types/hast": "^3.0.4",
     "@types/mdast": "^4.0.4",

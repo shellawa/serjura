@@ -6,6 +6,7 @@
   import { ArrowLeft } from "@lucide/svelte"
   import { Card } from "$lib/components/shadcn-svelte/ui/card/"
   import { copyCode } from "$lib/utils/copy-code.js"
+  import Giscus from "@giscus/svelte"
 
   const window = getWindow()
   const document = getDocument()
@@ -70,6 +71,22 @@
       <div use:copyCode>
         {@html data.content}
       </div>
+
+      <Giscus
+        repo="shellawa/serjura"
+        repoId="R_kgDOQsOnHA"
+        category="Giscus"
+        categoryId="DIC_kwDOQsOnHM4C0MrE"
+        mapping="specific"
+        term={data.meta.id.toString()}
+        id={data.meta.id.toString()}
+        strict="0"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="top"
+        theme="dark"
+        lang="en"
+      />
     </article>
     <!-- toc -->
     <aside class="sticky top-24 hidden w-64 lg:block">
@@ -91,6 +108,10 @@
     </aside>
   </div>
 </main>
+
+<svelte:head>
+  <meta name="giscus:backlink" content="https://serjura.com/blogs/{data.meta.id}" />
+</svelte:head>
 
 <style>
   :global(html.dark .shiki, html.dark .shiki span) {
